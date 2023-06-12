@@ -1,5 +1,5 @@
 .background-image {
-    background-image: url('./Main image.jpg');
+    background-image: url('./public/images/Main\ image.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -57,13 +57,13 @@
     padding: 50px;
     box-sizing: border-box;*/
     position: absolute;
-    margin-left: 500px;
-    margin-top: 5%;
+    margin-left: 50px;
+    margin-top: 15%;
     width: 250px;
-    height: 500px;
+    height: 300px;
     top: 20px;
     left: 50px;
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(0.5px);
     /* background: rgba(255, 255, 255, 0.174); */
     box-shadow: 0px 4px 5px #575454;
     border-radius: 5px;
@@ -77,4 +77,10 @@
 .content-field li a {
     padding: 5px 5px;
     text-decoration: none;
+    font-size: 30px;
+    line-height: 3;
+}
+li img{
+    width: 50px;
+    height: 50px;
 }
