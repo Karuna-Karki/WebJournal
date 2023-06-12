@@ -47,6 +47,35 @@ li a {
     text-decoration: none;
 
 }*/
+
+.title {
+    font-family: 'Luxurious Roman', cursive;
+    padding: 15px;
+    line-height: 2;
+    opacity: 0.6;
+}
+
+.title h2 {
+    margin-top: 10%;
+    font-size: 2.5rem;
+}
+
+.title h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.title p {
+    font-family: 'Poly', serif;
+    margin-top: 150px;
+    text-align: right;
+    width: 86%;
+    margin-left: 25px;
+}
+
 .title-block {
     margin-top: -4.5%;
     margin-left: 30%;
@@ -63,6 +92,17 @@ li a {
     text-align: center;
     letter-spacing: 0.08em;
     text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.3);
+
+}
+form input {
+    height: 30px;
+    border-radius: 10px;
+}
+
+.form-btn {
+    border-radius: 24px;
+    height: 30px;
+    width: 100px;
 
 }
 
@@ -95,7 +135,7 @@ li a {
 }
 
 .background-image {
-    background-image: url('./Main image.jpg');
+    background-image: url('./public/images/Main\ image.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
