@@ -60,25 +60,37 @@
     margin-left: 50px;
     margin-top: 15%;
     width: 250px;
-    height: 300px;
+    height: fit-content;
     top: 20px;
     left: 50px;
     backdrop-filter: blur(0.5px);
     /* background: rgba(255, 255, 255, 0.174); */
-    box-shadow: 0px 4px 5px #575454;
+    box-shadow: 6px 8px 15px #575454;
     border-radius: 5px;
+    box-sizing: border-box ;
+    border: 1px solid black;
+  
 }
-
 
 .content-field li {
     list-style: none;
+    display: flex;
+    align-items: center;
+  
+   
 }
 
 .content-field li a {
-    padding: 5px 5px;
+    padding: 5px 10px ;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 35px;
+    color: #875c3e;
     line-height: 3;
+    /* border-bottom: 1px solid #875c3e; */
+    
+}
+a:hover{
+    background-color: #875c3e7c;
 }
 li img{
     width: 50px;
