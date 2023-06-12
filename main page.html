@@ -55,13 +55,51 @@
                 <p>whether you're looking to record your daily experiences,express your innermost emotions or capture
                     your progresses, our platform provides a safe and secure space to do so.</p>
             </div>
-            <div class="J-block">
-                <input type="text" class="input" placeholder="Enter your journal name" required>
-                <a href="" class="btn2">Login</a>
-            
-            </div>
+<!-- <form>
+                <div class="J-block"> 
+                   <label for="journalname"> <input type="text" class="journalname" id="journalname" placeholder="Enter your journal name" required/></label>
+                    <button name="nextBtn">Next</button>
+                </div>
+                <div id="password">
+                  <label for="password"> Journal password <input type="password" name="password" placeholder="password" required/></label>
+                    <a href="" class="btn2" >Login</a>
+                </div>
+
+            </form>-->
+            <form action="">
+                <div class="form-field">
+                    <label for="email"><input type="text" name="email" placeholder="Enter Your email"/></label>
+                    <button name="nextBtn">Next</button>
+                </div>
+                <div class="form-field">
+                    <label for="password">password<input type="text" id="password" name="password"/></label>
+                <!-- <button name="loginBtn">Login</button> -->
+                <a href="" name="loginBtn">Login</a>
+                </div>
+            </form>
         </div>
     </div>
+    
+    <script>
+        const form = document.forms[0];
+        const loginBtn= document.querySelector("form a");
+        loginBtn.style.display = "none";
+
+        form.addEventListener("submit", function(event){
+            event.preventDefault();
+        });
+
+        const password = document.forms[0].password;
+        password.parentNode.style.display = "none";
+        const nextBtn = document.forms[0].nextBtn;
+
+        nextBtn.addEventListener("click", function(){
+            password.parentNode.style.display ="block";
+            loginBtn.style.display = "block";
+            nextBtn.style.display = "none";
+            document.forms[0].email.parentNode.style.display = "none";
+        });
+    </script>
 
 </body>
 

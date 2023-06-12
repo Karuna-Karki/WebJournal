@@ -122,7 +122,7 @@ li a {
 
 }
 
-/* .welcome-block { 
+ .welcome-block { 
     position: absolute;
     width:700px;
     height:60px;
@@ -130,9 +130,9 @@ li a {
     
 
 }
-/* .welcome2-block{ 
+ /*.welcome2-block{ 
     position:relative;
-    /* display: block; 
+     display: block; 
     flex-direction: column;
     /* align-items:center; 
     padding-left: 25px;
@@ -142,8 +142,8 @@ li a {
     height: 130px;
     font-size: 20px;
 
-}*/
-.J-block {
+}
+/*.J-block {
     margin-top: 55%;
 }
 
@@ -160,15 +160,13 @@ li a {
 
 .btn2 {
     margin-left: 2%;
-    /* width: 1000px; */
-    /* height: 50px; */
     padding: 10px 10px; 
     background: #D6AE91;
     border: 1px solid #909b9b;
     border-radius: 32px;
     text-decoration: none;
     font-size: px;
-    /* letter-spacing: 0.05em; */
+    letter-spacing: 0.05em; 
     font-weight: 200;
     font-family: 'Poppins';
     color: rgba(50, 49, 49, 0.753);
@@ -178,3 +176,7 @@ li a {
 .btn2:hover {
     background-color: #c8a083d1;
 }
+
+/* #password{ 
+    display: none;
+}*/
