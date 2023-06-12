@@ -94,15 +94,29 @@ li a {
     text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.3);
 
 }
+
+.form-field input{
+    margin-left: 30px;
+}
 form input {
-    height: 30px;
+    height: 35px;
+    width: 350px;
+    padding-left: 10px;
+    border: 1px;
     border-radius: 10px;
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.403);
 }
 
 .form-btn {
     border-radius: 24px;
-    height: 30px;
+    height: 35px;
     width: 100px;
+    margin-left: 8px;
+    border: none;
+    background-color: #d6ae9185;
+    opacity: 0.8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.442);
+    cursor: pointer;
 
 }
 
@@ -139,7 +153,7 @@ form input {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 900px;
+    height: 800px;
     /* mix-blend-mode: multiply; */
     opacity: 0.8;
     filter: blur(2px);
@@ -152,9 +166,9 @@ form input {
     margin-left: 250px;
     margin-top: 30px;
     width: 550px;
-    height: 600px;
+    height: 650px;
     top: 20px;
-    left: 500px;
+    left: 550px;
     backdrop-filter: blur(1px);
     background: rgba(255, 255, 255, 0.174);
     box-shadow: 0px 4px 30px #575454;
@@ -162,61 +176,4 @@ form input {
 
 }
 
- .welcome-block { 
-    position: absolute;
-    width:700px;
-    height:60px;
-    
-    
-
-}
- /*.welcome2-block{ 
-    position:relative;
-     display: block; 
-    flex-direction: column;
-    /* align-items:center; 
-    padding-left: 25px;
-    padding-right: 20px;
-    gap: 40px;
-    width:600px;
-    height: 130px;
-    font-size: 20px;
-
-}
-/*.J-block {
-    margin-top: 55%;
-}
-
-.input {
-    width: 350px;
-    height: 30px;
-    margin-left: 20px;
-    border: 1px solid rgb(199, 198, 198);
-    border-radius: 8px;
-    padding: 5px;
-
-
-}
-
-.btn2 {
-    margin-left: 2%;
-    padding: 10px 10px; 
-    background: #D6AE91;
-    border: 1px solid #909b9b;
-    border-radius: 32px;
-    text-decoration: none;
-    font-size: px;
-    letter-spacing: 0.05em; 
-    font-weight: 200;
-    font-family: 'Poppins';
-    color: rgba(50, 49, 49, 0.753);
-    
-}
-
-.btn2:hover {
-    background-color: #c8a083d1;
-}
-
-/* #password{ 
-    display: none;
-}*/
+ 
