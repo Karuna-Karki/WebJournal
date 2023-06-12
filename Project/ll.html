@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Password Input Demo</title>
+  <style>
+    #passwordInput {
+      display: none;
+    }
+  </style>
+  <script>
+    function showPasswordInput() {
+      document.getElementById('passwordInput').style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <input type="submit" value="Submit" onclick="showPasswordInput()">
+    
+    <div id="passwordInput">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+  </form>
+</body>
+</html>

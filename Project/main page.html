@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./showPassword.js">
+    <title>Main Page</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="L-block">
+            <div>
+                <a href="#" title="logo">
+                    <img src="logo.JPG" alt="logo" class="logo-block">
+                </a>
+            </div>
+            <!-- <div class="header-block"> 
+                <nav class="nav-block">
+                    <ul>
+                        <li><a href="" title="">Home</a></li>
+                        <li><a href="" title="">About-us</a></li>
+                        <li><a href="" title="">Contact-us</a></li>
+                    </ul>
+                </nav>
+            </div>-->
+            <div class="title-block">
+                <p>Web Journal</p>
+            </div>
+
+            <div class="button-block">
+                <a href="" class="btn">Register</a>
+            </div>
+        </div>
+    </header>
+    <div id="H-block">
+        <div class="background-image"></div>
+        <div class="log-block">
+            <div class="welcome-block">
+                <h2>Welcome to Digital Haven,</h2>
+            </div>
+            <div class="welcome2-block">
+                <h3>where the art of journaling meets the convenience of technology</h3>
+            </div>
+            <div class="description-block">
+                <p>whether you're looking to record your daily experiences,express your innermost emotions or capture
+                    your progresses, our platform provides a safe and secure space to do so.</p>
+            </div>
+<!-- <form>
+                <div class="J-block"> 
+                   <label for="journalname"> <input type="text" class="journalname" id="journalname" placeholder="Enter your journal name" required/></label>
+                    <button name="nextBtn">Next</button>
+                </div>
+                <div id="password">
+                  <label for="password"> Journal password <input type="password" name="password" placeholder="password" required/></label>
+                    <a href="" class="btn2" >Login</a>
+                </div>
+
+            </form>-->
+            <form action="">
+                <div class="form-field">
+                    <label for="email"><input type="text" name="email" placeholder="Enter Your email"/></label>
+                    <button name="nextBtn">Next</button>
+                </div>
+                <div class="form-field">
+                    <label for="password">password<input type="text" id="password" name="password"/></label>
+                <button name="loginBtn">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        const form = document.forms[0];
+        form.addEventListener("submit", function(event){
+            event.preventDefault();
+        });
+        const password = document.forms[0].password;
+        password.parentNode.style.display = "none";
+        const nextBtn = document.forms[0].nextBtn;
+        console.log(nextBtn);
+
+        nextBtn.addEventListener("click", function(){
+            password.parentNode.style.display ="block";
+            document.forms[0].email.parentNode.style.display = "none";
+        });
+    </script>
+
+</body>
+
+</html>
