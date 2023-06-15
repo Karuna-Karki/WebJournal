@@ -18,7 +18,7 @@ createBtn.addEventListener("click", ()=>{
     let img = document.createElement("img");
     inputBox.className = "input-box";
     inputBox.setAttribute("contenteditable", "true");
-    img.src = "./images/delete.png";
+    img.src = "../notes/images/delete.png";
     notesContainer.appendChild(inputBox).appendChild(img);
 })
 
@@ -34,4 +34,13 @@ notesContainer.addEventListener("click", function(e){
             }
         })
     }
+})
+
+let diaryBtn = document.querySelectorAll(".content-field li");
+let diaryApp = document.querySelector(".container");
+diaryApp.style.display = "none";
+console.log(diaryApp);
+diaryBtn[2].addEventListener("click", function(){
+    diaryApp.style.display="inline-block";
+    document.querySelector(".todo-app").style.display="none";
 })

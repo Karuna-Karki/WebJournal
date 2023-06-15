@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .background-image {
     background-image: url('./image/Main\ image.jpg');
     background-position: center;
@@ -50,12 +56,6 @@
 
 .content-field {
     background-color: #eeeeee7d;
-    /* margin-right: 80%; 
-    margin-top: 2%;
-    width: 300px;
-    height: 500px;
-    padding: 50px;
-    box-sizing: border-box;*/
     position: absolute;
     margin-left: 50px;
     margin-top: 10%;
@@ -76,14 +76,15 @@
 .content-field li {
 
     list-style: none;
-    
-  
-   
 }
 
 ul{
-    margin-left: -35px;
+    /* margin-left: -35px; */
     margin-top: 50px;
+}
+
+ul li {
+    padding: 0;
 }
 
 .content-field li a {
@@ -92,11 +93,19 @@ ul{
     font-size: 35px;
     color: #875c3e;
     line-height: 3;
-    /* border-bottom: 1px solid #875c3e; */
+    /* border-bottom: 4px solid #875c3e; */
     
 }
-a:hover{
-    background-color: #875c3e7c;
+a:before{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    height: 6px;
+    transition: width 0.2s ease-in-out;
+    background: #664630;
+}
+a:hover:before{
+    width: 100%;
 }
 li img{
     width: 50px;
@@ -136,6 +145,7 @@ li img{
     padding: 40px 30px 70px;
     /* border: 1px solid black; */
     border-radius: 20px;
+    box-shadow: 0px 5px 10px  #563924;
 }
 .todo-app h2{
     color: #0b0a09;
@@ -174,6 +184,7 @@ button{
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
+    box-shadow: 0px 2px 6px  #563924;
 
 }
 ul li{
@@ -221,8 +232,70 @@ ul li span:hover{
     background: #edeef0;
 }
 
+/*notes*/
+.container{
+    position: absolute;
+    top: 20%;
+    left:35%;
+    box-sizing: border-box;
+    width: 55%;
+    min-height: 50vh;
+    background-color: #a9907e96;
+    border-radius: 30px;
+    box-shadow: 0px 5px 10px  #563924;
+    color: #fff;
+    padding-left: 10%;
+}
+.container h1{
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 600;
+    color: #4d4640;
+    
+}
+.container button img{
+    width: 30px;
+    margin-right: 8px;
+}
+.container h1 img{
+    width: 90px;
+}
+.container button{
+    display: flex;
+    align-items: center;
+    background: #A9907E;
+    color: #151414;
+    font-size: 16px;
+    outline: 0;
+    border: 0;
+    border-radius:40px;
+    padding: 15px 25px;
+    margin: 30px 0 20px;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px  #563924
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    min-height: 200px;
+    background-color: rgba(98, 92, 83, 0.579);
+    color: black;
+    padding: 20px;
+    margin: 20px 0;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px  #563924
+}
+.input-box img{
+    width: 40px;
+    position: absolute;
+    cursor: pointer;
+    bottom: 15px;
+    right: 15px;
 
-
+}
 
 
 
