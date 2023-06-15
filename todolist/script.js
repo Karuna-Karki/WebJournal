@@ -33,3 +33,11 @@ function showTask(){
     listContainer.innerHTML = localStorage.getItem("data");
 }
 showTask();
+
+let todoBtn = document.querySelector(".content-field li");
+let todoApp = document.querySelector(".todo-app");
+todoApp.style.display = "none";
+console.log(todoApp);
+todoBtn.addEventListener("click", function(){
+    todoApp.style.display="inline-block";
+})
