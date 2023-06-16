@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +57,7 @@
                 </div>
                 <div class="container">
                     <h1><img src="../notes/images/diary.png">Diary</h1>
-                    <button class="btn"><img src="../notes/images/edit.png">Create Notes</button>
+                    <button class="btn"><img src="../notes/images/edit.png">Create </button>
                     <div class="notes-container">
                         <!-- <p contenteditable="true" class="input-box">
                             <img src="../notes/images/delete.png">

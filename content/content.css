@@ -101,11 +101,11 @@ a:before{
     position: absolute;
     bottom: -2px;
     height: 6px;
-    transition: width 0.2s ease-in-out;
+    transition: width 0.1s ease-in-out;
     background: #664630;
 }
 a:hover:before{
-    width: 100%;
+    width: 80%;
 }
 li img{
     width: 80px;

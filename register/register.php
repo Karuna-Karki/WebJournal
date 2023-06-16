@@ -1,3 +1,21 @@
+<?php
+require("connect.php");
+
+if (isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $sql = "INSERT INTO register(username, email,  password) VALUES('$username','$email', '$password')";
+    
+    $res = $conn->query($sql);
+
+    if($res) {
+        echo "registration successfull";
+    }
+    $conn->close();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,10 +31,10 @@
     </div>
     <div class="wrapper">
         <h1>Register</h1>
-    <form action="#" method="GET" name="form_name">
+    <form action="#" method="POST" name="form_name">
         <div class="field-group">
             <label for="fname">Username</label>
-            <input type="text" id="uname" name="uname" value="" />
+            <input type="text" id="username" name="username" value="" />
             
         </div>
         <div class="field-group">
@@ -26,12 +44,12 @@
         </div>
         <div class="field-group">
             <label for="fname">Password</label>
-            <input type="password" id="pwd" name="pwd" value="" />
+            <input type="password" id="password" name="password" value="" />
         </div>
         
-        <div class="field-group">
-            <button type="submit" name="submit" id="submit">Create an account</button>
-        </div>
+        <div class="button-block">
+                <a href="../content/page2.php" class="btn">Create account</a>
+            </div>
     </form>
 </div>
 </body>

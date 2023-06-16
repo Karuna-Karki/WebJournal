@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&family=Poppins&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Poly:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Poly:ital@1&display=swap"
+        rel="stylesheet">
     <title>Main Page</title>
 </head>
 
@@ -28,7 +29,7 @@
             </div>
 
             <div class="button-block">
-                <a href="../register/index.html" class="btn">Register</a>
+                <a href="register/register.php" class="btn">Register</a>
             </div>
         </div>
     </header>
@@ -38,28 +39,30 @@
             <div class="title">
                 <h2>Welcome to Digital Haven,</h2>
                 <h3>where the art of journaling meets the convenience of technology</h3>
-                <p>whether you're looking to record your daily experiences,express your innermost emotions or capture your progresses, our platform provides a safe and secure space to do so.</p>
+                <p>whether you're looking to record your daily experiences,express your innermost emotions or capture
+                    your progresses, our platform provides a safe and secure space to do so.</p>
             </div>
             <form action="">
                 <div class="form-field">
-                    <label for="email"><input type="text" name="email" placeholder="Enter Your email"/></label>
+                    <label for="email"><input type="text" name="email" placeholder="Enter Your email" /></label>
                     <button name="nextBtn" class="form-btn">Next</button>
                 </div>
                 <div class="form-field">
-                    <label for="password"><input type="text" id="password" name="password" placeholder="Password"/></label>
-                 <button name="loginBtn">Login</button> 
-                <!-- <a href="" name="loginBtn" class="form-btn">Login</a> -->
+                    <label for="password"><input type="text" id="password" name="password"
+                            placeholder="Password" /></label>
+                    <!-- <button name="loginBtn">Login</button>  -->
+                    <a href="" name="loginBtn" class="loginBtn">Login</a>
                 </div>
             </form>
         </div>
     </div>
-    
+
     <script>
         const form = document.forms[0];
-        const loginBtn= document.querySelector("form a");
+        const loginBtn = document.querySelector("form a");
         loginBtn.style.display = "none";
 
-        form.addEventListener("submit", function(event){
+        form.addEventListener("submit", function (event) {
             event.preventDefault();
         });
 
@@ -67,8 +70,8 @@
         password.parentNode.style.display = "none";
         const nextBtn = document.forms[0].nextBtn;
 
-        nextBtn.addEventListener("click", function(){
-            password.parentNode.style.display ="block";
+        nextBtn.addEventListener("click", function () {
+            password.parentNode.style.display = "block";
             loginBtn.style.display = "block";
             nextBtn.style.display = "none";
             document.forms[0].email.parentNode.style.display = "none";

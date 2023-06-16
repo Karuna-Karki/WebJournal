@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+}
+.form-container{
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #000;
+    margin-left: 30%;
+    margin-right: 30%;
+
+}
+.field-group{
+
+    width: 100%;
+    padding: 1px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    font-size: 20px;
+  }
+  button{
+    background-color: #16809a;
+    color: white;
+    padding: 10px 10px;
+    margin: 8px 0;
+    font-size: 20px;
+    border: 1px solid rgb(9, 47, 45);
+    cursor: pointer;
+    width: 20%;
+    opacity: 0.9;
+}
+button:hover{
+    opacity: 1;
+}
+
+a{
+    color: blue;
+}
