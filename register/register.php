@@ -1,5 +1,5 @@
 <?php
-require("connect.php");
+require("../db/connect.php");
 
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
@@ -10,9 +10,12 @@ if (isset($_POST['submit'])) {
     $res = $conn->query($sql);
 
     if($res) {
-        echo "registration successfull";
+        header("location: /WebJournal/mainpage/index.php");
+    }else{
+        echo "Couldn't insert";
     }
     $conn->close();
+
 }
 ?>
 
@@ -35,22 +38,70 @@ if (isset($_POST['submit'])) {
         <div class="field-group">
             <label for="fname">Username</label>
             <input type="text" id="username" name="username" value="" />
+            <span></span>
             
         </div>
         <div class="field-group">
             <label for="email">E-Mail</label>
             <input type="text" id="email" name="email" value=""/>
+            <span></span>
             
         </div>
         <div class="field-group">
             <label for="fname">Password</label>
             <input type="password" id="password" name="password" value="" />
+            <span></span>
         </div>
-        
+        <!-- <a name="submit" >Create Account</a> -->
+        <!-- <button  type="submit"  id="submit"></button> -->
         <div class="button-block">
-                <a href="../content/page2.php" class="btn">Create account</a>
-            </div>
+            <button type="submit" class="btn" name="submit">Register</button>
+        </div>
     </form>
+
 </div>
+<script type="text/javascript">
+        let form = document.forms[0];
+        let username = form.username,
+            email = form.email,
+            password = form.password;
+
+            let unameRgx = /^[a-z0-9_-]{3,15}$/g;
+            let emailRgx = /^(.+)@(.+)$/g;
+            let pwdRgx  = /^(?=.*[0-9])(?=.{8,})/g;
+        
+
+        form.addEventListener("submit", function(e) {
+            console.log("Submitted");
+            if(username.value == '' || 
+            email.value == '' || 
+            password.value == '') {
+                e.preventDefault();
+                alert("All fields are required!");
+            }
+        });
+        username.addEventListener("change", function() {
+            if(unameRgx.test(this.value) == false) {
+                this.nextElementSibling.innerHTML = "Username format not matched.";
+            }else{
+                this.nextElementSibling.innerText = "";
+            }
+        });
+        email.addEventListener("change", function(){
+            if(emailRgx.test(this.value) == false){
+                this.nextElementSibling.innerText = "email format not valid.";
+            }else{
+                this.nextElementSibling.innerText = "";
+            }
+           
+        });
+        password.addEventListener("change", function(){
+            if(pwdRgx.test(this.value) == false){
+                this.nextElementSibling.innerText = "Password format not valid.";
+            } else{
+                this.nextElementSibling.innerText = "";
+            }
+        });
+    </script>
 </body>
 </html>

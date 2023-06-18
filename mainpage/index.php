@@ -1,6 +1,27 @@
+<?php
+    require("../db/connect.php");
+    if(isset($_POST["loginBtn"])){
+        $email = $_POST["email"];
+        $sql = "select * from register where email = '$email'";
+        $res = $conn->query($sql);
+
+        if ($res->num_rows > 0){
+            while($row = $res->fetch_assoc()){
+                $password = $_POST["password"];
+                if ($password == $row["password"]){  
+                    header("location:../content/page2.php");
+                }else{
+                    echo "something is wrong";
+                }
+            }
+        }
+    }else{
+        echo "not";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,7 +50,7 @@
             </div>
 
             <div class="button-block">
-                <a href="register/register.php" class="btn">Register</a>
+                <a href="../register/register.php" class="btn">Register</a>
             </div>
         </div>
     </header>
@@ -42,7 +63,8 @@
                 <p>whether you're looking to record your daily experiences,express your innermost emotions or capture
                     your progresses, our platform provides a safe and secure space to do so.</p>
             </div>
-            <form action="">
+
+            <form action="#" method="POST">
                 <div class="form-field">
                     <label for="email"><input type="text" name="email" placeholder="Enter Your email" /></label>
                     <button name="nextBtn" class="form-btn">Next</button>
@@ -50,8 +72,7 @@
                 <div class="form-field">
                     <label for="password"><input type="text" id="password" name="password"
                             placeholder="Password" /></label>
-                    <!-- <button name="loginBtn">Login</button>  -->
-                    <a href="" name="loginBtn" class="loginBtn">Login</a>
+                    <button name="loginBtn" class="loginBtn">Login</button> 
                 </div>
             </form>
         </div>
@@ -59,7 +80,7 @@
 
     <script>
         const form = document.forms[0];
-        const loginBtn = document.querySelector("form a");
+        const loginBtn = document.querySelector(".loginBtn");
         loginBtn.style.display = "none";
 
         form.addEventListener("submit", function (event) {
@@ -76,6 +97,7 @@
             nextBtn.style.display = "none";
             document.forms[0].email.parentNode.style.display = "none";
         });
-    </script>
+    </script> 
 
 </body>
+</html>
