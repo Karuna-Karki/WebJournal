@@ -1,6 +1,4 @@
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +11,6 @@
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
     <title>Content Page</title>
 </head>
-
 <body>
 
     <head>
