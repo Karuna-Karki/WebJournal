@@ -1,5 +1,5 @@
-/* 
-/*.logo-block {
+
+.logo-block {
     width: 65px;
     height: 60px;
     border-radius: 50%;
@@ -16,6 +16,7 @@
     border-bottom: 1px solid rgb(199, 198, 198);
 
 }
+
 
 
 .title {
@@ -68,7 +69,12 @@
 .form-field input{
     margin-left: 30px;
 }
+
+.form-field{
+    display: flex;
+}
 form input {
+    flex: 1;
     height: 35px;
     width: 350px;
     padding-left: 10px;
@@ -87,6 +93,21 @@ form input {
     opacity: 0.8;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.442);
     cursor: pointer;
+
+}
+
+.loginBtn{
+    
+    border-radius: 24px;
+    height: 35px;
+    width: 100px;
+    margin-left: 8px;
+    border: none;
+    background-color: #d6ae9185;
+    opacity: 0.8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.442);
+    cursor: pointer;
+
 
 }
 
@@ -152,11 +173,7 @@ form input {
     /* box-sizing: border-box; 
     border: 1px solid burlywood;
     
-} 
 
-.loginBtn{
-    
+} */
 
-}
-
-  */ */
+ 
