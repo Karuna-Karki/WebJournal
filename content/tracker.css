@@ -1,0 +1,131 @@
+/* .containert {
+    position: absolute;
+    top: 10%;
+    box-sizing: border-box;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 50px;
+    margin-left:35%;
+    margin-top: 10%;
+
+
+
+
+}
+
+.datecontainer{
+    margin-bottom: 5%;
+}
+
+.tcontainer{
+    margin-top: 2%;
+}
+
+
+.start{
+    float: left;
+    padding-right: 30%;
+ }
+
+ .end{
+    padding-right:5% ;
+} 
+
+textarea{
+    /* vertical-align: middle; 
+    float: left;
+    padding: 25px;
+    margin-right: 100px;
+    background-color: #e1efe19f;
+
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.clicked {
+    background-color: #b9e6bb;
+    font-weight: bold;
+}
+
+/* #block{
+    position: relative;
+
+} */ 
+
+.containert {
+    position: absolute;
+    top:10%;
+    box-sizing: border-box;
+    box-shadow: rgba(100, 100, 111, 0.647) 0px 7px 29px 0px;
+    padding: 30px;
+    padding-right: 25%;
+    margin-left: 30%;
+    margin-top: 10%;
+    background:  #a9907e9d;
+
+
+}
+
+.datecontainer{
+    margin-bottom: 2%;
+   
+}
+
+.tcontainer{
+    margin-top: 2%;
+}
+
+/* .end{
+    margin-left: 20px;
+} */
+.start{
+    float: left;
+    padding-right: 10%;
+}
+
+
+label{
+    font-size: 20px;
+    
+}
+
+textarea{
+    /* vertical-align: middle; */
+    float: left;
+    padding: 25px;
+    margin-right: 90px;
+    background-color: #dcc4b49d;
+
+}
+
+table {
+    border-collapse: collapse;
+    display: flex;
+}
+
+td {
+
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.clicked {
+    background-color: #81ef87;
+    font-weight: bold;
+}
+
+#save-button{
+    margin-top: 30px;
+    margin-left: 300px;
+}

@@ -38,7 +38,12 @@ let todoBtn = document.querySelectorAll(".content-field li");
 let todoApp = document.querySelector(".todo-app");
 todoApp.style.display = "none";
 console.log(todoApp);
+
 todoBtn[0].addEventListener("click", function(){
     todoApp.style.display="inline-block";
     document.querySelector(".container").style.display="none";
+    document.querySelector(".des-block").style.display="none";
+    document.querySelector(".containert").style.display="none";
+    
+
 });

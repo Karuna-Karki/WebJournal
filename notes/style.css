@@ -12,6 +12,12 @@
     padding-top: 4%;
     padding-left: 10%;
 }
+
+.title-block{
+    display: flex;
+    align-items: center;
+}
+
 .container h1{
     display: flex;
     align-items: center;

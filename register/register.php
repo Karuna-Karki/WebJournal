@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
     $res = $conn->query($sql);
 
     if($res) {
-        header("location: /WebJournal/mainpage/index.php");
+        header("location: /WebJournal/content/page2.php");
     }else{
         echo "Couldn't insert";
     }

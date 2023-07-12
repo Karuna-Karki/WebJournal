@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <label for="date-input">Enter a Date:</label>
+<input type="date" id="date-input">
+
+<script>
+  const dateInput = document.getElementById("date-input");
+  dateInput.addEventListener("change", function() {
+    const selectedDate = dateInput.value;
+    alert("You selected: " + selectedDate);
+  }); -->
+  <form>
+    <label for="dateInput">Date:</label>
+    <input type="date" id="dateInput" name="dateInput">
+    <button type="submit">Submit</button>
+  </form>
+  
+  <p id="output"></p>
+  
+  <script>
+    const form = document.querySelector('form');
+    const output = document.querySelector('#output');
+  
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      const dateInput = document.querySelector('#dateInput').value;
+      const date = new Date(dateInput);
+  
+      const options = { day: 'numeric', month: 'numeric', year: 'numeric' };
+      const formattedDate = date.toLocaleDateString(undefined, options);
+  
+      output.textContent = formattedDate;
+    });
+  </script>
+  
+</script>
+
+    
+</body>
+</html>

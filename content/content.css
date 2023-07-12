@@ -9,7 +9,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 700px;
+    height: 800px;
     /* mix-blend-mode: multiply; */
     opacity: 0.8;
     filter: blur(2px);
@@ -41,6 +41,7 @@
 }
 
 .title-block p {
+    margin-top: 23%;
     font-family: 'Luxurious Script';
     font-size: 60px;
     font-weight: 400;
@@ -52,6 +53,49 @@
     letter-spacing: 0.08em;
     text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.3);
 
+}
+
+.des-block{
+    position: absolute;
+    top: 20%;
+    margin-left:40%;
+    padding: 3%;
+    height: 500px;
+    backdrop-filter: blur(5px); 
+    background: rgba(255, 255, 255, 0.327); 
+    box-shadow: 8px 8px 15px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-sizing: border-box ;
+    
+}
+.des-block h2{
+    font-size: 35px;
+    font-family: "Montaga";
+    color: #4d4640;
+    margin-bottom: 5px;
+
+
+}
+.des-block p{
+    font-size: 18px;
+    margin-top: 2%;
+    margin-left: 8%;
+    font-family: "Montaga";
+    font-weight: bolder;
+    color: #4d4640;
+
+}
+
+.des-block ul{
+    margin-top: 5%;
+    line-height: 20px;
+    font-family: "Montaga";
+    
+
+    
+}
+.des-block li{
+    background-color: #a28d7a6e;
 }
 
 .content-field {
@@ -74,7 +118,6 @@
 
 
 .content-field li {
-
     list-style: none;
 }
 
@@ -88,7 +131,8 @@ ul li {
 }
 
 .content-field li a {
-    
+    display: flex;
+    align-items: center;
     text-decoration: none;
     font-size: 35px;
     color: #875c3e;

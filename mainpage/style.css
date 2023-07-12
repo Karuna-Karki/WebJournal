@@ -125,11 +125,11 @@ form input {
     background-repeat: no-repeat;
     height: 800px;
     /* mix-blend-mode: multiply; */
-    opacity: 0.8;
+    /* opacity: 0.8;
     filter: blur(2px);
 
 
-}
+} */
 
 .log-block {
     position: absolute;
