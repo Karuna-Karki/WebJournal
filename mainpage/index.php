@@ -68,12 +68,12 @@ if(isset($_POST["loginBtn"])){
             <form action="#" method="POST">
                 <div class="form-field">
                     <label for="email"><input type="text" name="email" placeholder="Enter Your email" /></label>
-                    <button name="nextBtn" class="form-btn">Next</button>
+                    <button type="button" name="nextBtn" class="form-btn">Next</button>
                 </div>
                 <div class="form-field">
                     <label for="password"><input type="text" id="password" name="password"
                             placeholder="Password" /></label>
-                    <button name="loginBtn" class="loginBtn">Login</button> 
+                    <button type="submit" name="loginBtn" class="loginBtn">Login</button> 
                 </div>
             </form>
         </div>
@@ -83,10 +83,6 @@ if(isset($_POST["loginBtn"])){
         const form = document.forms[0];
         const loginBtn = document.querySelector(".loginBtn");
         loginBtn.style.display = "none";
-
-        form.addEventListener("submit", function (event) {
-            event.preventDefault();
-        });
 
         const password = document.forms[0].password;
         password.parentNode.style.display = "none";
