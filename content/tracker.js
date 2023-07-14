@@ -1,8 +1,14 @@
+const markedDaysArr = [];
+
 function markCell(cell) {
     cell.classList.toggle("clicked");
-    // var tick = cell.innerHTML.includes("&#10003;") ? "" : "&#10003;";
     cell.innerHTML = cell.innerHTML.replace("&#10003;", "");
     cell.removeAttribute("onclick");
+    const marked_day = Number(cell.innerHTML);
+    markedDaysArr.push(marked_day);
+    document.querySelector("#marked").setAttribute("value", markedDaysArr);
+
+    console.log(document.querySelector("#marked"));
 }
 
 let trackerBtn = document.querySelectorAll(".content-field li");
