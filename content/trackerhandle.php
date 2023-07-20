@@ -5,8 +5,8 @@ if (isset($_POST["save-button"])) {
     $started = $_POST['started_date'];
     $ended = $_POST['ended_date'];
     $title = $_POST['title'];
-    $marked = count(explode(',', $_POST['marked']));
-
+    // $marked = explode(',', $_POST['marked']); To make array
+    $marked = $_POST["marked"];
     $sql = "INSERT INTO tracker(Started_Date, Ended_Date, Title, Marked) VALUES('$started', ' $ended', '$title', '$marked')";
     $res = $conn->query($sql);
 

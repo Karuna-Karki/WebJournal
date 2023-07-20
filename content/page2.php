@@ -30,6 +30,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Luxurious+Script&family=Marck+Script&family=Poppins&display=swap"
+        rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
@@ -67,8 +72,24 @@
                 <ul>
                     <li>The To-Dos section helps you prioritize and track your daily tasks.</li>
                     <li>The tracker section enables you to monitor habits.</li>
-                    <li>The diary section allows you to jot down thoughts, feelings, and notable events.</li>
+                    <li>The diary section allows you to jot down notable events.</li>
                 </ul>
+
+                <?Php
+                    require("../db/connect.php");
+                    $sql = "select * from tracker";
+                    $res = $conn->query($sql);
+
+                    if ($res){
+                        while($row = $res->fetch_assoc()){
+                            $marked_days = explode(",", $row["Marked"]);
+                            var_dump($marked_days);
+                            foreach ($marked_days as $key => $value) {
+                                
+                            }
+                        }
+                    }
+                ?>
             </div>
 
             <div class="todo-app">
@@ -84,68 +105,77 @@
                 </ul>
             </div>
 
-            <form action="./trackerhandle.php" method="post">
+            
                 <div class="containert">
-                    <div class="datecontainer">
-                        <div class="start">
-                            <label for="">Started Date: </label>
-                            <input type="date" id="" name="started_date" />
+                    <button id="add" onclick="">Add</button>
+                    <form action="./trackerhandle.php" method="post">
+                    <div id="contentContainer">
+                    <div class="containert2" id="templateContainer">
+                        <div class="datecontainer">
+                            <div class="start">
+                                <label for="">Started Date: </label>
+                                <input type="date" id="" name="started_date" />
+                            </div>
+                            <div class="end">
+                                <label for="">Ended Date: </label>
+                                <input type="date" id="" name="ended_date" />
+                            </div>
                         </div>
-                        <div class="end">
-                            <label for="">Ended Date: </label>
-                            <input type="date" id="" name="ended_date" />
+
+                        <div class="Tcontainer">
+                            <textarea id="title" cols="0" rows="0" placeholder="write a title to track"
+                                name="title"></textarea>
                         </div>
-                    </div>
 
-                    <div class="Tcontainer">
-                        <textarea id="title" cols="0" rows="0" placeholder="write a title to track" name="title"></textarea>
+                        <table>
+                            <tr>
+                                <td onclick="markCell(this)"> 1</td>
+                                <td onclick="markCell(this)"> 2</td>
+                                <td onclick="markCell(this)"> 3</td>
+                                <td onclick="markCell(this)"> 4</td>
+                                <td onclick="markCell(this)"> 5</td>
+                                <td onclick="markCell(this)"> 6</td>
+                                <td onclick="markCell(this)"> 7</td>
+                                <td onclick="markCell(this)"> 8</td>
+                                <td onclick="markCell(this)"> 9</td>
+                                <td onclick="markCell(this)"> 10</td>
+                                <td onclick="markCell(this)"> 11</td>
+                                <td onclick="markCell(this)">12</td>
+                                <td onclick="markCell(this)">13</td>
+                                <td onclick="markCell(this)">14</td>
+                                <td onclick="markCell(this)">15</td>
+                            </tr>
+                            <tr>
+                                <td onclick="markCell(this)"> 16</td>
+                                <td onclick="markCell(this)"> 17</td>
+                                <td onclick="markCell(this)"> 18</td>
+                                <td onclick="markCell(this)">19</td>
+                                <td onclick="markCell(this)">20</td>
+                                <td onclick="markCell(this)">21</td>
+                                <td onclick="markCell(this)">22</td>
+                                <td onclick="markCell(this)">23</td>
+                                <td onclick="markCell(this)">24</td>
+                                <td onclick="markCell(this)">25</td>
+                                <td onclick="markCell(this)">26</td>
+                                <td onclick="markCell(this)">27</td>
+                                <td onclick="markCell(this)">28</td>
+                                <td onclick="markCell(this)">29</td>
+                                <td onclick="markCell(this)">30</td>
+                            </tr>
+                        </table>
+                        <input type="hidden" name="marked" id="marked" value="" />
+                        <button type="submit" id="save-button" name="save-button">Save</button>
                     </div>
-
-                    <table>
-                        <tr>
-                            <td onclick="markCell(this)"> 1</td>
-                            <td onclick="markCell(this)"> 2</td>
-                            <td onclick="markCell(this)"> 3</td>
-                            <td onclick="markCell(this)"> 4</td>
-                            <td onclick="markCell(this)"> 5</td>
-                            <td onclick="markCell(this)"> 6</td>
-                            <td onclick="markCell(this)"> 7</td>
-                            <td onclick="markCell(this)"> 8</td>
-                            <td onclick="markCell(this)"> 9</td>
-                            <td onclick="markCell(this)"> 10</td>
-                            <td onclick="markCell(this)"> 11</td>
-                            <td onclick="markCell(this)">12</td>
-                            <td onclick="markCell(this)">13</td>
-                            <td onclick="markCell(this)">14</td>
-                            <td onclick="markCell(this)">15</td>
-                        </tr>
-                        <tr>
-                            <td onclick="markCell(this)"> 16</td>
-                            <td onclick="markCell(this)"> 17</td>
-                            <td onclick="markCell(this)"> 18</td>
-                            <td onclick="markCell(this)">19</td>
-                            <td onclick="markCell(this)">20</td>
-                            <td onclick="markCell(this)">21</td>
-                            <td onclick="markCell(this)">22</td>
-                            <td onclick="markCell(this)">23</td>
-                            <td onclick="markCell(this)">24</td>
-                            <td onclick="markCell(this)">25</td>
-                            <td onclick="markCell(this)">26</td>
-                            <td onclick="markCell(this)">27</td>
-                            <td onclick="markCell(this)">28</td>
-                            <td onclick="markCell(this)">29</td>
-                            <td onclick="markCell(this)">30</td>
-                        </tr>
-                    </table>
-                    <input type="hidden" name="marked" id="marked" value=""/>
-                    <button type="submit" id="save-button" name="save-button">Save</button>
+                    </div>
             </form>
+    
         </div>
 
 
 
+
         <div class="container">
-            <h1><img src="../notes/images/diary.png">Notes</h1>
+            <h1><img src="../notes/images/diary.png">Diary</h1>
             <button class="btn"><img src="../notes/images/edit.png">Create </button>
 
             <form action="../notes/notes-handle.php" method="post">
