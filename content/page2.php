@@ -76,19 +76,19 @@
                 </ul>
 
                 <?Php
-                    require("../db/connect.php");
-                    $sql = "select * from tracker";
-                    $res = $conn->query($sql);
-
-                    if ($res){
-                        while($row = $res->fetch_assoc()){
-                            $marked_days = explode(",", $row["Marked"]);
-                            var_dump($marked_days);
-                            foreach ($marked_days as $key => $value) {
-                                
-                            }
-                        }
-                    }
+                // require("../db/connect.php");
+                // $sql = "select * from tracker";
+                // $res = $conn->query($sql);
+                
+                // if ($res){
+                //     while($row = $res->fetch_assoc()){
+                //         $marked_days = explode(",", $row["Marked"]);
+                //         var_dump($marked_days);
+                //         foreach ($marked_days as $key => $value) {
+                
+                //         }
+                //     }
+                // }
                 ?>
             </div>
 
@@ -108,7 +108,7 @@
             
                 <div class="containert">
                     <button id="add" onclick="">Add</button>
-                    <form action="./trackerhandle.php" method="post">
+                    <form name="tracker_form" action="./trackerhandle.php" method="post">
                     <div id="contentContainer">
                     <div class="containert2" id="templateContainer">
                         <div class="datecontainer">
