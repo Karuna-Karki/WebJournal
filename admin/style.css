@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bg-image{
+    background-image: url(../content/image/logo.JPG);
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    height: 100vh;
+    background-size: auto;
+    position: relative;
+}
+input{
+    width: 90%;
+    padding: 10px 10px 10px;
+    margin-bottom: 10px;
+}
+.container{
+    border: 2px solid black;
+    width: 450px;
+    padding: 50px;
+    border-radius: 10px;
+    position: absolute;
+    top: 35vh;
+    left: 80vh;
+}
+label{
+    font-weight: bold;
+}

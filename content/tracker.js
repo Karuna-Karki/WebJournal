@@ -8,7 +8,7 @@ function markCell(cell) {
   markedDaysArr.push(marked_day);
   document.querySelector("#marked").setAttribute("value", markedDaysArr);
   const tracker_form = document.forms[0];
-  console.log(document.querySelector("#marked"));
+  // console.log(document.querySelector("#marked"));
   // cell.setAttribute("name", "marked");
   const markedValue = document.createElement("input");
   markedValue.setAttribute("value", marked_day);
@@ -26,7 +26,7 @@ function markCell(cell) {
   xhttp.send(formData);
   xhttp.onload = function () {
     if (this.readyState === 4 && this.status === 200) {
-      console.log(this.responseText);
+      // console.log(this.responseText);
     }
   }
 };
@@ -35,8 +35,6 @@ function markCell(cell) {
 let trackerBtn = document.querySelectorAll(".content-field li");
 let tApp = document.querySelector(".containert");
 tApp.style.display = "none";
-
-console.log(tApp);
 trackerBtn[1].addEventListener("click", function () {
   tApp.style.display = "inline-block";
   document.querySelector(".container").style.display = "none";
@@ -51,7 +49,12 @@ const templateContainer = document.getElementById("templateContainer");
 
 addButton.addEventListener("click", function () {
   const newContainer = templateContainer.cloneNode(true);
+  newContainer.querySelectorAll(".clicked").forEach(element => {
+    element.classList.remove("clicked");
+    element.removeChild(element.children[0]);
+    console.log(element.addEventListener("click", function(){
+      markCell(this);
+    }));
+  });
   contentContainer.appendChild(newContainer);
 });
-
-
