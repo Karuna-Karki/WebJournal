@@ -35,6 +35,24 @@
 
 }
 
+/*logout*/
+div .logout-block{
+    margin-top: 25px;
+    
+    
+}
+.btn{
+    text-decoration: none;
+    margin-left: 600px;
+    font-weight: bolder;
+    color: #151414;
+    border:1px solid #151414;
+    background-color: #efdbcda7;
+    padding: 8px;
+    border-radius: 8px;
+
+}
+
 .title-block {
     margin-top: -4.5%;
     margin-left: 30%;

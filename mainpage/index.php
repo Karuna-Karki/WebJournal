@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require("../db/connect.php");
 if(isset($_POST["loginBtn"])){
     $email = $_POST["email"];
@@ -8,7 +10,9 @@ if(isset($_POST["loginBtn"])){
     if ($res->num_rows > 0){
         while($row = $res->fetch_assoc()){
             $password = $_POST["password"];
-            if ($password == $row["password"]){  
+            if ($password == $row["password"]){ 
+                $_SESSION['isLoggedIn'] = true; 
+                print_r($_SESSION);
                 header("location:../content/page2.php");
             }else{
                 echo "something is wrong";
@@ -17,9 +21,6 @@ if(isset($_POST["loginBtn"])){
     }
 }
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">

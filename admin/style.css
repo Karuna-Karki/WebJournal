@@ -17,7 +17,7 @@ input{
     margin-bottom: 10px;
 }
 .container{
-    border: 2px solid black;
+    background: rgb(237, 240, 240);
     width: 450px;
     padding: 50px;
     border-radius: 10px;

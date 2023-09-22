@@ -1,6 +1,7 @@
 <?php
 require_once("../db/connect.php");
 
+
 $total_users = 0;
 $res = $conn->query("SELECT COUNT(*) AS total FROM register;");
 if ($res) {
@@ -47,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["updateUser"])) {
         }
 
         nav {
-            background-color: #333;
+            background-color: #DEB887;
             padding: 10px 20px;
             display: flex;
             justify-content: space-between;
@@ -55,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["updateUser"])) {
         }
 
         nav a {
-            color: #fff;
+            color: black;
             text-decoration: none;
             font-weight: bold;
         }
@@ -64,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["updateUser"])) {
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: #DEB887;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
         }
@@ -93,22 +94,25 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["updateUser"])) {
         }
 
         ul {
-            list-style: none;
+            list-style:circle;
             padding: 0;
         }
 
         li {
-            margin-bottom: 5px;
+            margin-right: 50px;
+            margin-bottom: 15px;
+            font-size: 20px;
+            
+            text-decoration:underline;
         }
 
         a {
             color: #007bff;
-            text-decoration: none;
         }
 
         form input[type="text"],
         form input[type="email"],
-        form input[type="password"],
+        form input[type="password"]
         form button[type="submit"] {
             width: 100%;
             padding: 10px;
@@ -116,12 +120,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["updateUser"])) {
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+        nav .logo-block{
+            max-width: 100px;
+            max-height: 100px;
+            border-radius: 50%;
+        }
+        
     </style>
 </head>
 
 <body>
     <nav>
-        <a href="#">Logo</a>
+        <a href="../mainpage/index.php" title="logo">
+            <img src="../mainpage/logo.JPG" alt="logo" class="logo-block">
+        </a>
         <ul>
             <li><a href="#" id="users-link">Users</a></li>
             <li><a href="#">Categories</a></li>
