@@ -1,5 +1,5 @@
 const notesContainer = document.querySelector(".notes-container");
-const createBtn = document.querySelector(".btn");
+const createBtn = document.querySelector("#diary-create");
 const dateTimeInput = document.getElementById('date-time-input').value;
 
 let notes = document.querySelectorAll(".input-box");
@@ -29,7 +29,6 @@ createBtn.addEventListener("click", ()=>{
     inputBox.setAttribute("contenteditable", "true");
     img.src = "../notes/images/delete.png";
     notesContainer.appendChild(inputBox).appendChild(img);
-
     console.log(Array.from(notesContainer.children).forEach(element => function(){
         console.log(element);
     }));

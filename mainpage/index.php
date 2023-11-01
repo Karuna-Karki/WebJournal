@@ -1,21 +1,32 @@
+
 <?php
 session_start();
-
 require("../db/connect.php");
-if(isset($_POST["loginBtn"])){
+
+if (isset($_POST["loginBtn"])) {
     $email = $_POST["email"];
-    $sql = "select * from register where email = '$email'";
+    $sql = "SELECT * FROM register WHERE email = '$email'";
     $res = $conn->query($sql);
 
-    if ($res->num_rows > 0){
-        while($row = $res->fetch_assoc()){
+    if ($res->num_rows > 0) {
+        while ($row = $res->fetch_assoc()) {
             $password = $_POST["password"];
-            if ($password == $row["password"]){ 
-                $_SESSION['isLoggedIn'] = true; 
-                print_r($_SESSION);
-                header("location:../content/page2.php");
-            }else{
-                echo "something is wrong";
+            if ($password == $row["password"]) {
+                // Store user data in session
+                $_SESSION['isLoggedIn'] = true;
+                $_SESSION['user_id'] = $row['id'];
+                $_SESSION['user_email'] = $row['email'];
+                // Add more user data to the session as needed
+
+                // Store user data in a cookie (example, adjust expiration time)
+                $cookie_name = "user_data";
+                $cookie_value = json_encode(['user_id' => $row['id'], 'user_email' => $row['email']]);
+                $cookie_expiration = time() + 3600; // Cookie expires in 1 hour
+                setcookie($cookie_name, $cookie_value, $cookie_expiration, "/");
+
+                header("Location: ../content/page2.php");
+            } else {
+                echo "Something is wrong";
             }
         }
     }

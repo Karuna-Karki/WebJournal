@@ -16,8 +16,6 @@
 //         echo "Failed";
 //     }
 // }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +32,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&family=Marck+Script&family=Poppins&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Luxurious+Script&family=Marck+Script&family=Poppins&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.js"></script>
+    <script src="alert.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
@@ -51,10 +55,7 @@
                         <img src="./image/logo.JPG" alt="logo" class="logo-block"></a>
                 </div>
                 <div class="title-block">
-                    <p>Web Journal</p>
-                </div>
-                <div class="logout-block">
-                    <a href="../content/logout.php" class="btn">Log out</a>
+                    <h3>Web Journal</h3>
                 </div>
             </div>
             </header>
@@ -82,13 +83,13 @@
                 // require("../db/connect.php");
                 // $sql = "select * from tracker";
                 // $res = $conn->query($sql);
-
+                
                 // if ($res){
                 //     while($row = $res->fetch_assoc()){
                 //         $marked_days = explode(",", $row["Marked"]);
                 //         var_dump($marked_days);
                 //         foreach ($marked_days as $key => $value) {
-
+                
                 //         }
                 //     }
                 // }
@@ -111,22 +112,64 @@
 
             <div class="containert">
                 <button id="add" onclick="">Add</button>
-                <form name="tracker_form" action="./trackerhandle.php" method="post">
+                <button id="pop-up"  onclick="openPopup()">How it works</button>
+
+                <div id="popup" class="popup-box">
+                    <!-- <span class="close-btn" onclick="closePopup()">&times;</span>  -->
+
+                    <div class="popup-content">
+                <span class="close" id="closeSlider" onclick="closePopup()">&times;</span> 
+
+                        
+                        <div class="box">
+                    
+                      
+
+                 
+                        <div class="content">
+                            <div class="images">
+                                <img src="./image/Started Date.jpg" class="img1">
+                            </div>
+                            <div class="images">
+                                <img src="./image/Textfield.jpg">
+                            </div>
+                            <div class="images">
+                                <img src="./image/Tracking table.jpg" >
+                            </div>
+                            <div class="images">
+                                <img src="./image/Ended Date.jpg" >
+                            </div>
+
+
+                            <div class="slide-left" onclick="slide(-1)">
+                                <span class="fa-solid fa-angle-left"></span>
+                            </div>
+                            <div class="slide-right" onclick="slide(1)">
+                                <span class="fa-solid fa-angle-right"></span>
+                            </div>
+                        </div>
+                      
+                    </div>
+                </div>
+                </div>
+                
                     <div id="contentContainer">
                         <div class="containert2" id="templateContainer">
+                            <form name="tracker_form" action="./trackerhandle.php" method="post">
                             <div class="datecontainer">
                                 <div class="start">
                                     <label for="">Started Date: </label>
-                                    <input type="date" id="" name="started_date" />
+                                    <input type="date" id="d1" name="started_date" />
                                 </div>
                                 <div class="end">
                                     <label for="">Ended Date: </label>
-                                    <input type="date" id="" name="ended_date" />
+                                    <input type="date" id="d2" name="ended_date" />
                                 </div>
                             </div>
 
                             <div class="Tcontainer">
-                                <textarea id="title" cols="0" rows="0" placeholder="write a title to track" name="title"></textarea>
+                                <textarea id="title" cols="0" rows="0" placeholder="write a title to track"
+                                    name="title"></textarea>
                             </div>
 
                             <table>
@@ -166,11 +209,14 @@
                                 </tr>
                             </table>
                             <input type="hidden" name="marked" id="marked" value="" />
+                           
+                        
                             <button type="submit" id="save-button" name="save-button">Save</button>
                         </div>
                     </div>
                 </form>
-
+                
+                
             </div>
 
 

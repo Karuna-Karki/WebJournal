@@ -165,7 +165,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["updateUser"])) {
 
                     <h2>Update User</h2>
                     <?php
-                    $editId = $_GET['edit'];
+                    $editId = isset($_GET['edit']) ? $_GET['edit'] : '';
                     $stmt = $conn->prepare("SELECT * FROM register WHERE id = ?");
                     $stmt->bind_param("i", $editId);
                     $stmt->execute();
@@ -174,8 +174,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["updateUser"])) {
                     ?>
                     <form method="post" id="update-form">
                         <input type="hidden" name="userId" value="<?php echo $editId ?>">
-                        <input type="text" name="updatedUsername" value="<?php echo $user['username'] ?>" required>
-                        <input type="email" name="updatedEmail" value="<?php echo $user['email'] ?>" required>
+                        <input type="text" name="updatedUsername" value="<?php echo isset($user['username']) ? $user['username'] : '' ?>" required>
+                        <input type="email" name="updatedEmail" value="<?php echo isset($user['email']) ? $user['email'] : '' ?>" required>
                         <button type="submit" name="updateUser">Update</button>
                     </form>
                 </div>

@@ -1,0 +1,88 @@
+
+
+.containert {
+    position: absolute;
+    top:2%;
+    box-sizing: border-box;
+    box-shadow: rgba(100, 100, 111, 0.647) 0px 7px 29px 0px;
+    padding: 30px;
+    padding-right: 25%;
+    margin-left: 30%;
+    margin-top: 10%;
+    background:  #a9907e9d;
+
+
+}
+
+.datecontainer{
+    margin-bottom: 2%;
+   
+}
+
+.tcontainer{
+    margin-top: 2%;
+}
+
+/* .end{
+    margin-left: 20px;
+} */
+.start{
+    float: left;
+    padding-right: 10%;
+
+}
+
+
+
+label{
+    font-size: 20px;
+    
+}
+
+textarea{
+    /* vertical-align: middle; */
+    float: left;
+    padding: 25px;
+    margin-right: 90px;
+    background-color: #dcc4b49d;
+
+}
+
+table {
+    border-collapse: collapse;
+    display: flex;
+}
+
+td {
+
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.clicked {
+    background-color: #81ef87;
+    font-weight: bold;
+}
+
+#add{
+    
+    width: 80px;
+    height: 30px;
+    padding: 5px;
+    color: black;
+    font-weight: bolder;
+    
+
+}
+
+#save-button{
+    margin-top: 30px;
+    margin-left: 300px;
+    color: black;
+    font-weight: bolder;
+}
+.containert2{
+    margin-top: 2%;
+}
