@@ -32,13 +32,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Luxurious+Script&family=Marck+Script&family=Poppins&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&family=Marck+Script&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.js"></script>
-    <script src="alert.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
@@ -58,18 +55,20 @@
                     <h3>Web Journal</h3>
                 </div>
             </div>
-            </header>
+
             <div class="background-image"></div>
+
             <div class="content-field">
                 <nav class="nav-block">
                     <ul>
-                        <li><a title="Add your To-Do list"><img src="./image/todoo.png"> To-Dos</a></li>
+                        <li><a title="Add your To-Do list"><img src="./image/todoo.png"> To-Do</a></li>
                         <li><a title="Track down your practices"><img src="./image/timg2.png" alt="">
                                 Tracker</a></li>
                         <li><a title="Write down"><img src="./image/diary (2).png" alt="">Diary</a></li>
                     </ul>
                 </nav>
             </div>
+
             <div class="des-block">
                 <h2>Welcome to Contents of Web Journal</h2>
                 <p>Utilize chronicle of Web Journal tailored to meet your needs.</p>
@@ -83,19 +82,20 @@
                 // require("../db/connect.php");
                 // $sql = "select * from tracker";
                 // $res = $conn->query($sql);
-                
+
                 // if ($res){
                 //     while($row = $res->fetch_assoc()){
                 //         $marked_days = explode(",", $row["Marked"]);
                 //         var_dump($marked_days);
                 //         foreach ($marked_days as $key => $value) {
-                
+
                 //         }
                 //     }
                 // }
                 ?>
             </div>
-
+            
+            <!-- To-Do Section -->
             <div class="todo-app">
                 <h2>To-Do List <img src="../todolist/image/todolist.png"> </h2>
                 <div class="row">
@@ -109,53 +109,48 @@
                 </ul>
             </div>
 
-
+            <!-- Tracker Section -->
             <div class="containert">
                 <button id="add" onclick="">Add</button>
-                <button id="pop-up"  onclick="openPopup()">How it works</button>
+                <button id="pop-up" onclick="openPopup()">How it works</button>
 
                 <div id="popup" class="popup-box">
                     <!-- <span class="close-btn" onclick="closePopup()">&times;</span>  -->
 
                     <div class="popup-content">
-                <span class="close" id="closeSlider" onclick="closePopup()">&times;</span> 
-
-                        
+                        <span class="close" id="closeSlider" onclick="closePopup()">&times;</span>
                         <div class="box">
-                    
-                      
 
-                 
-                        <div class="content">
-                            <div class="images">
-                                <img src="./image/Started Date.jpg" class="img1">
-                            </div>
-                            <div class="images">
-                                <img src="./image/Textfield.jpg">
-                            </div>
-                            <div class="images">
-                                <img src="./image/Tracking table.jpg" >
-                            </div>
-                            <div class="images">
-                                <img src="./image/Ended Date.jpg" >
-                            </div>
+                            <div class="content">
+                                <div class="images">
+                                    <img src="./image/Started Date.jpg" class="img1">
+                                </div>
+                                <div class="images">
+                                    <img src="./image/Textfield.jpg">
+                                </div>
+                                <div class="images">
+                                    <img src="./image/Tracking table.jpg">
+                                </div>
+                                <div class="images">
+                                    <img src="./image/Ended Date.jpg">
+                                </div>
 
 
-                            <div class="slide-left" onclick="slide(-1)">
-                                <span class="fa-solid fa-angle-left"></span>
+                                <div class="slide-left" onclick="slide(-1)">
+                                    <span class="fa-solid fa-angle-left"></span>
+                                </div>
+                                <div class="slide-right" onclick="slide(1)">
+                                    <span class="fa-solid fa-angle-right"></span>
+                                </div>
                             </div>
-                            <div class="slide-right" onclick="slide(1)">
-                                <span class="fa-solid fa-angle-right"></span>
-                            </div>
+
                         </div>
-                      
                     </div>
                 </div>
-                </div>
-                
-                    <div id="contentContainer">
-                        <div class="containert2" id="templateContainer">
-                            <form name="tracker_form" action="./trackerhandle.php" method="post">
+
+                <div id="contentContainer">
+                    <div class="containert2" id="templateContainer">
+                        <form name="tracker_form" action="./trackerhandle.php" method="post">
                             <div class="datecontainer">
                                 <div class="start">
                                     <label for="">Started Date: </label>
@@ -168,8 +163,7 @@
                             </div>
 
                             <div class="Tcontainer">
-                                <textarea id="title" cols="0" rows="0" placeholder="write a title to track"
-                                    name="title"></textarea>
+                                <textarea id="title" cols="0" rows="0" placeholder="write a title to track" name="title"></textarea>
                             </div>
 
                             <table>
@@ -209,22 +203,18 @@
                                 </tr>
                             </table>
                             <input type="hidden" name="marked" id="marked" value="" />
-                           
-                        
+
+
                             <button type="submit" id="save-button" name="save-button">Save</button>
-                        </div>
                     </div>
+                </div>
                 </form>
-                
-                
             </div>
 
-
-
-
-            <div class="container">
+            <!-- Diary Section -->
+            <div class="container diary">
                 <h1><img src="../notes/images/diary.png">Diary</h1>
-                <button class="btn"><img src="../notes/images/edit.png">Create </button>
+                <button class="btn" id="diary-create"><img src="../notes/images/edit.png">Create </button>
 
                 <form action="../notes/notes-handle.php" method="post">
                     <div class="notes-container">
@@ -235,13 +225,13 @@
                     <button type="submit" name="save-btn">Save</button>
                 </form>
             </div>
-
-
         </div>
 
         <script src="../todolist/script.js"></script>
         <script src="tracker.js" type="text/javascript"></script>
         <script src="../notes/script.js"></script>
+        <script src="alert.js"></script>
+
 
 </body>
 

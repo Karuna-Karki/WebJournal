@@ -35,24 +35,6 @@
 
 }
 
-/*logout*/
-div .logout-block{
-    margin-top: 25px;
-    
-    
-}
-.btn{
-    text-decoration: none;
-    margin-left: 600px;
-    font-weight: bolder;
-    color: #151414;
-    border:1px solid #151414;
-    background-color: #efdbcda7;
-    padding: 8px;
-    border-radius: 8px;
-
-}
-
 .title-block {
     margin-top: -4.5%;
     margin-left: 30%;
@@ -266,7 +248,7 @@ button{
     outline: none;
     padding: 16px 50px;
     background-color: #A9907E;
-    color: #fff;
+    color: #000000;
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
@@ -385,6 +367,14 @@ ul li span:hover{
 }
 
 
+#pop-up{
+    margin-left: 2%;
+    width: 130px;
+    height: 30px;
+    padding: 5px;
+    color: black;
+    font-weight: bolder;
+}
 
 
 
