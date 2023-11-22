@@ -106,6 +106,10 @@ if (isset($_POST["loginBtn"])) {
             nextBtn.style.display = "none";
             document.forms[0].email.parentNode.style.display = "none";
         });
+
+        
+
+        
     </script> 
 
 </body>
