@@ -107,6 +107,46 @@ if (isset($_POST["loginBtn"])) {
             document.forms[0].email.parentNode.style.display = "none";
         });
 
+
+
+        let form1 = document.forms[0];
+        let
+            email = form1.email,
+            password = form1.password;
+
+            
+            let emailRgx = /^(.+)@(.+)$/g;
+            let pwdRgx  = /^(?=.*[0-9])(?=.{8,})/g;
+        
+
+        form.addEventListener("submit", function(e) {
+            console.log("Submitted");
+            if( 
+            email.value == '' || 
+            password.value == '') {
+                e.preventDefault();
+                alert("All fields are required!");
+            }
+        });
+        
+        email.addEventListener("change", function(){
+            if(emailRgx.test(this.value) == false){
+                this.nextElementSibling.innerText = "email format not valid.";
+            }else{
+                this.nextElementSibling.innerText = "";
+            }
+           
+        });
+        password.addEventListener("change", function(){
+            if(pwdRgx.test(this.value) == false){
+                this.nextElementSibling.innerText = "Password format not valid.";
+            } else{
+                this.nextElementSibling.innerText = "";
+            }
+        });
+
+        
+
         
 
         
